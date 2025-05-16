@@ -219,8 +219,10 @@ main .amountCont {
   font-weight: 700;
   margin-top: 0.8rem;
 }
-main .amountCont img {
+main .amountCont button {
   cursor: pointer;
+  border: none;
+  display: flex;
 }
 main .addCartBtn {
   display: flex;
@@ -245,4 +247,20 @@ main .addCartBtn img {
 main .addCartBtn:hover {
   background-color: var(--bg-color);
   border: 1px solid var(--secondary-color);
+}
+header .private .cart {
+  border: none;
+  position: relative;
+}
+header .private .cart .amountInCart {
+  color: var(--bg-color);
+  background-color: var(--secondary-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50rem;
+  padding: 2px 8px;
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  display: none;
 }

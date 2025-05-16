@@ -55,4 +55,40 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = (currentIndex + 1) % images.length;
     showImage(currentIndex);
   });
+
+  //choosing Quantity
+  const minusBtn = document.querySelector('.minusBtn');
+  const plusBtn = document.querySelector('.plusBtn');
+  const currentAmountEl = document.querySelector('.currentAmount');
+  let currentAmount = 0;
+
+  function updateCurrentAmount(newAmount) {
+    currentAmountEl.textContent = currentAmount;
+    minusBtn.disabled = currentAmount === 0;
+  }
+  plusBtn.addEventListener('click', () => {
+    currentAmount++;
+    updateCurrentAmount();
+  });
+  minusBtn.addEventListener('click', () => {
+    currentAmount--;
+    updateCurrentAmount();
+  });
+  updateCurrentAmount();
+
+  //Updating Cart
+
+  const cartBtn = document.querySelector('.addCartBtn');
+  const amountInCartEl = document.querySelector('.amountInCart');
+  function updateCart() {
+    amountInCartEl.textContent = currentAmount;
+    if (currentAmount > 0) {
+      amountInCartEl.style.display = 'flex';
+    } else {
+      amountInCartEl.style.display = 'none';
+    }
+  }
+  cartBtn.addEventListener('click', () => {
+    updateCart();
+  });
 });
