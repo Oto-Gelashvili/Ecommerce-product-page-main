@@ -20,8 +20,8 @@ The designs were created to the following widths:
 
 - Very dark blue: #1d2025
 - Dark grayish blue: #68707d
-- Grayish blue: hsl(220, 14%, 75%)
-- Light grayish blue: hsl(230, 60.00%, 98.00%)
+- Grayish blue: #b6bcc8
+- Light grayish blue: #f7f8fd
 - White: hsl(0, 0.00%, 100.00%)
 - Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%)
 
