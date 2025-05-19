@@ -138,6 +138,7 @@ header nav .hamburgerMenu {
 main .imgCont {
   display: flex;
   position: relative;
+  margin-top: 8rem;
 }
 main .imgCont .productImg {
   width: 100%;
@@ -263,4 +264,74 @@ header .private .cart .amountInCart {
   top: -50%;
   right: -50%;
   display: none;
+}
+.cartCont {
+  position: fixed;
+  top: 14rem;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  display: none;
+  font-size: 1.6rem;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: var(--bg-color);
+  width: 95%;
+  height: 280px;
+  z-index: 13;
+  font-weight: 700;
+  border: 1px solid #dcdcdf;
+}
+.cartCont .cartContHeading {
+  color: #000;
+  margin-bottom: 0.4rem;
+  padding: 1.8rem;
+}
+.cartCont .cartContMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  border-top: 1px solid #dcdcdf;
+  padding-inline: 1.8rem;
+  height: 100%;
+  flex-direction: column;
+}
+.productOutline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  width: 100%;
+}
+.productOutline .outlineThumbnail {
+  width: 80px;
+  border-radius: 4px;
+}
+.productOutlineDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.productOutlineDesc span {
+  font-weight: 700;
+  color: #000;
+}
+.cartContMain .CheckoutBtn {
+  margin-top: 1.8rem;
+  text-align: center;
+  color: #000;
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  padding: 1.6rem 2.4rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+  outline: none;
+  transition: 0.4s;
+  border: 1px solid transparent;
+  width: 100%;
 }

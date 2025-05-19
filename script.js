@@ -78,17 +78,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //Updating Cart
 
-  const cartBtn = document.querySelector('.addCartBtn');
+  const cartBtn = document.querySelector('.cart');
+  const cartCont = document.querySelector('.cartCont');
+  const cartContMain = document.querySelector('.cartContMain');
+  const addToCartBtn = document.querySelector('.addCartBtn');
   const amountInCartEl = document.querySelector('.amountInCart');
+
   function updateCart() {
     amountInCartEl.textContent = currentAmount;
-    if (currentAmount > 0) {
-      amountInCartEl.style.display = 'flex';
+    amountInCartEl.style.display = currentAmount > 0 ? 'flex' : 'none';
+  }
+  function renderCartContents() {
+    const amount = Number(amountInCartEl.textContent);
+    if (amount > 0) {
+      cartContMain.innerHTML = `
+    <div class="productOutline">
+      <img src="./images/image-product-1-thumbnail.jpg" alt="product thumbnail" class="outlineThumbnail">
+      <div class="productOutlineDesc">
+        <p>Fall Limited Edition Sneakers</p>
+        <p>$125.00 x ${amount} <span>$${(125 * amount).toFixed(2)}</span></p>
+      </div>
+      <img src="./images/icon-delete.svg" alt="delete product" class="deleteProduct">
+    </div>
+    <button class="CheckoutBtn">
+      <p class="addCart">Checkout</p>
+    </button>
+  `;
     } else {
-      amountInCartEl.style.display = 'none';
+      cartContMain.textContent = 'Your cart is empty.';
     }
   }
-  cartBtn.addEventListener('click', () => {
+  function showCart() {
+    const isVisible = cartCont.style.display === 'flex';
+    cartCont.style.display = isVisible ? 'none' : 'flex';
+
+    if (!isVisible) {
+      renderCartContents();
+    }
+  }
+
+  addToCartBtn.addEventListener('click', () => {
     updateCart();
+    if (cartCont.style.display === 'flex') {
+      renderCartContents();
+    }
+  });
+  cartBtn.addEventListener('click', () => {
+    showCart();
+  });
+
+  cartContMain.addEventListener('click', (e) => {
+    if (e.target.classList.contains('deleteProduct')) {
+      currentAmount = 0;
+      updateCurrentAmount();
+      updateCart();
+      cartContMain.textContent = 'Your cart is empty.';
+    }
   });
 });
