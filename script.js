@@ -135,4 +135,13 @@ document.addEventListener('DOMContentLoaded', () => {
       cartContMain.textContent = 'Your cart is empty.';
     }
   });
+  document.addEventListener('click', (e) => {
+    if (
+      cartCont.style.display === 'flex' &&
+      !cartBtn.contains(e.target) &&
+      !cartCont.contains(e.target)
+    ) {
+      cartCont.style.display = 'none';
+    }
+  });
 });

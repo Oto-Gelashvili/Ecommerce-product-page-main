@@ -15,14 +15,9 @@
 
 <body>
   <div class="overlay"></div>
-  <div class="cartCont">
-    <div class="cartContHeading">
-      <p class="cartHeading">Cart</p>
-    </div>
-    <div class="cartContMain">
-    </div>
-  </div>
+
   <header>
+
     <nav>
       <div class="menu">
         <img src="./images/icon-menu.svg" alt="Menu Icon">
@@ -74,6 +69,13 @@
       </div>
     </nav>
     <div class="private">
+      <div class="cartCont">
+        <div class="cartContHeading">
+          <p class="cartHeading">Cart</p>
+        </div>
+        <div class="cartContMain">
+        </div>
+      </div>
       <button class="cart">
         <img src="./images/icon-cart.svg" alt="Cart Icon">
         <div class="amountInCart">
@@ -112,20 +114,22 @@
         </p>
 
       </div>
-      <div class="amountCont">
-        <button class="minusBtn">
-          <img src="./images/icon-minus.svg" alt="Minus">
-        </button>
-        <p class="currentAmount"> 0
-        </p>
-        <button class="plusBtn">
-          <img src="./images/icon-plus.svg" alt="Plus">
+      <div class="wrapperForBtns">
+        <div class="amountCont">
+          <button class="minusBtn">
+            <img src="./images/icon-minus.svg" alt="Minus">
+          </button>
+          <p class="currentAmount"> 0
+          </p>
+          <button class="plusBtn">
+            <img src="./images/icon-plus.svg" alt="Plus">
+          </button>
+        </div>
+        <button class="addCartBtn">
+          <img src="./images/icon-cart.svg" alt="cart icon">
+          <p class="addCart">Add to cart</p>
         </button>
       </div>
-      <button class="addCartBtn">
-        <img src="./images/icon-cart.svg" alt="cart icon">
-        <p class="addCart">Add to cart</p>
-      </button>
     </div>
   </main>
   <script src="./script.js"></script>
