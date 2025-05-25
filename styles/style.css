@@ -370,6 +370,42 @@ header nav .desktopMenu {
   header .private .user {
     height: 36px;
   }
+  main {
+    padding-inline: 6.4rem;
+    padding-block: 2.4rem;
+  }
+  main .imgCont {
+    align-items: center;
+    justify-content: center;
+  }
+  main .imgCont .productImg {
+    width: 50%;
+    border-radius: 8%;
+  }
+  main .imgCont .arrowCont {
+    width: 50%;
+  }
+  main .textCont {
+    text-align: center;
+    margin-top: 2.4rem;
+  }
+  main .priceCont {
+    justify-content: center;
+  }
+  main .amountCont,
+  main .addCartBtn {
+    width: 50%;
+    margin-inline: auto;
+  }
+  main .textCont {
+    padding-block: 2.4rem;
+  }
+  .cartCont {
+    width: 341px;
+    top: 10rem;
+    left: 100%;
+    transform: translate(-105%, -10%);
+  }
 }
 @media (min-width: 1024px) {
   header {
