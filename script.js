@@ -56,6 +56,21 @@ document.addEventListener('DOMContentLoaded', () => {
     showImage(currentIndex);
   });
 
+  //image slider stuff for desktop devices
+  const galleryCont = document.querySelector('.galleryCont');
+
+  galleryCont.addEventListener('click', (e) => {
+    if (e.target.tagName === 'IMG') {
+      const currentIndex = parseInt(e.target.dataset.index);
+      showImage(currentIndex);
+      Array.from(galleryCont.children).forEach((element) => {
+        element.classList.remove('activeThumb');
+      });
+
+      e.target.classList.add('activeThumb');
+    }
+  });
+
   //choosing Quantity
   const minusBtn = document.querySelector('.minusBtn');
   const plusBtn = document.querySelector('.plusBtn');

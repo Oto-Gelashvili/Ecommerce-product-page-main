@@ -360,6 +360,9 @@ header nav .desktopMenu {
   opacity: 0.5;
   transition: 0.4s;
 }
+.galleryCont {
+  display: none;
+}
 @media (min-width: 768px) {
   header nav .menu,
   header nav .hamburgerMenu {
@@ -518,6 +521,26 @@ header nav .desktopMenu {
   main .addCartBtn img {
     width: 16px;
   }
+  .imgCont {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  .galleryCont {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  .galleryCont > * {
+    border-radius: 8px;
+    width: calc(25% - 0.6rem);
+    cursor: pointer;
+    transition: 0.4s;
+    border: 3px solid transparent;
+  }
+
+  .galleryCont > *:hover {
+    opacity: 0.5;
+  }
 }
 @media (min-width: 1300px) {
   header {
@@ -530,4 +553,13 @@ header nav .desktopMenu {
   main {
     gap: 8.4rem;
   }
+  .galleryCont {
+    gap: 2.4rem;
+  }
+  .galleryCont > * {
+    width: calc(25% - 1.8rem);
+  }
+}
+.activeThumb {
+  border: 3px solid var(--secondary-color);
 }
